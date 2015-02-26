@@ -1,18 +1,25 @@
-<div class="panel panel-primary">
+<div class="panel panel-default">
 	<div class="panel-heading">
-		<h3>
 			<%= job_title job %>
-		</h3>
 	</div>
 	<div class="panel-body">
 		<%= simple_format job.description %>
-		<p>
-			<%= pluralize job.comments.size, 'comment' %>
-			<%= link_to 'Show', job %>
+		<p class="comment">
+			<span>
+				<i class="glyphicon glyphicon-comment"></i> <%= pluralize job.comments.size, 'comment' %>
+			</span>
+			<%= link_to job,  class: 'btn btn-info' do %>
+				<i class="glyphicon glyphicon-zoom-in"></i> Show
+			<% end %>
 
 			<% if current_company == job.company %>
-				| <%= link_to 'Edit', edit_job_path(job) %>
-				| <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn' %>
+				<%= link_to edit_job_path(job), class: 'btn btn-warning' do %>
+					<i class="glyphicon glyphicon-pencil"></i> Edit
+				<% end %>
+				<%= link_to job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do %>
+					<i class="glyphicon glyphicon-trash"></i> Delete
+				<% end %>
 			<% end %>
 		</p>
+	</div>
 </div>

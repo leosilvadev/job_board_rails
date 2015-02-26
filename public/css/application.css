@@ -10,6 +10,20 @@ header.navbar-inverse li.active a{
   background-color: #291B54 !important;
 }
 
+p.comment{
+  background-color: rgb(244, 240, 255);
+  padding: 7px 10px 10px 10px;
+  border-radius: 5px;
+  width: 400px;
+  text-align: right;
+}
+
+p.comment>span{
+  float: left;
+  margin-top: 7px;
+  font-size: 1.2em;
+}
+
 
 .panel-primary>.panel-heading{
   background-color: #3C2D67;
