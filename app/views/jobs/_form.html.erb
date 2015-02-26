@@ -13,19 +13,25 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
-  
+
   <div class="field">
   	<%= f.label :premium %><br/>
-  	<%= f.check_box :premium%>
+  	<%= f.check_box :premium %>
   </div>
-  
   <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= link_to 'Back', jobs_path, class: 'btn btn-default' %>
+    <%= f.submit 'Save informations', class: 'btn btn-primary' %>
   </div>
 <% end %>
+
+<script>
+  $(document).ready(function(){
+    $("input[type='checkbox']").bootstrapSwitch();
+  });
+</script>

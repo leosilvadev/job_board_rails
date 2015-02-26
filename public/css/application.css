@@ -1,0 +1,59 @@
+body{
+  background-color: #F4F0FF;
+}
+
+header.navbar-inverse{
+  background-color: #1B0D45;
+}
+
+header.navbar-inverse li.active a{
+  background-color: #291B54 !important;
+}
+
+
+.panel-primary>.panel-heading{
+  background-color: #3C2D67;
+  border-color: #1B0D45;
+}
+
+.panel-primary{
+  border-color: #DBD3EF;
+}
+
+#panel-login .panel-heading{
+  text-align: center;
+  font-size: 2.2em;
+}
+
+.panel-body{
+  background-color:rgba(244, 240, 255, 0.32);
+}
+
+#panel-login{
+  width:400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#btn-login{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn.btn-primary {
+  background-color: rgba(60, 45, 103, 0.86);
+  border-color: #DBD3EF;
+}
+
+.btn.btn-primary:HOVER {
+  background-color: rgba(60, 45, 103, 0.66);
+  border-color: #DBD3EF;
+}
+
+input[type="checkbox"].form-control{
+  width:34px;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary{
+  background-color: rgba(127, 115, 161, 1);
+}

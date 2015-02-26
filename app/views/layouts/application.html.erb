@@ -5,36 +5,63 @@
 		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 		<%= csrf_meta_tags %>
+
+		<style>
+		@IMPORT url("/libs/css/bootstrap.min.css");
+		@IMPORT url("/libs/css/bootstrap-switch.min.css");
+			@IMPORT url("/css/application.css");
+		</style>
+		<script src="/libs/js/jquery-2.1.3.min.js"></script>
+		<script src="/libs/js/bootstrap.min.js"></script>
+		<script src="/libs/js/bootstrap-switch.min.js"></script>
+		<script src="/js/application.js"></script>
 	</head>
 	<body>
-		<nav>
-			<ul id="app-menu" class="nav pull-right">
-				<li>
-					<%= link_to "Premium Jobs", root_path %>
-				</li>
-				<li>
-					<%= link_to "All Jobs", jobs_path %>
-				</li>
-				<% if current_company %>
-					<li>
-						<%= link_to "New Job", new_job_path %>
-					</li>
-					<li>
-						<%= link_to "New company", new_company_path %>
-					</li>
-					<li>
-						Logged as <%= current_company.name %>
-					</li>
-					<li>
-						<%= link_to 'Logout', logout_path %>
-					</li>
-					<% else %>
-					<li>
-						<%= link_to "Login", login_path %>
-					</li>
-				<% end %>
-			</ul>
-		</nav>
+		<header class="navbar navbar-inverse navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="../" class="navbar-brand">Job Board</a>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<%= link_to "Premium Jobs", root_path %>
+						</li>
+						<li>
+							<%= link_to "All Jobs", jobs_path %>
+						</li>
+						<% if current_company %>
+							<li>
+								<%= link_to "New Job", new_job_path %>
+							</li>
+							<li>
+								<%= link_to "New company", new_company_path %>
+							</li>
+						<% end %>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<% if current_company %>
+							<li>
+								<a href="#">Logged as <%= current_company.name %></a>
+							</li>
+							<li>
+								<%= link_to 'Logout', logout_path %>
+							</li>
+							<% else %>
+							<li>
+								<%= link_to "Login", login_path %>
+							</li>
+						<% end %>
+					</ul>
+				</nav>
+			</div>
+		</header>
 
 		<div class="container">
 			<p id="notice"><%= notice %></p>

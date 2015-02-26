@@ -1,17 +1,17 @@
 <%= form_for(Company.new, url: authenticate_path, html: { class: 'form-horizontal' }) do |f| %>
-  <div class="control-group">
-    <%= f.label :email, class: 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :email %>
+    <div class="control-group">
+      <%= f.label :email, class: 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :email, class: 'form-control'%>
+      </div>
     </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :password, class: 'control-label' %>
-    <div class="controls">
-      <%= f.password_field :password %>
+    <div class="control-group">
+      <%= f.label :password, class: 'control-label' %>
+      <div class="controls">
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
     </div>
-  </div>
-  <div class="control-group controls">
-    <%= f.submit "Login", class: 'btn btn-primary' %>
-  </div>
+    <div class="control-group controls">
+      <%= f.submit "Login", class: 'btn btn-primary', id: 'btn-login' %>
+    </div>
 <% end %>
