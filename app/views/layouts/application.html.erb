@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JobBoard</title>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body>
+		<nav>
+			<ul id="app-menu" class="nav pull-right">
+				<li>
+					<%= link_to "Premium Jobs", root_path %>
+				</li>
+				<li>
+					<%= link_to "All Jobs", jobs_path %>
+				</li>
+				<% if current_company %>
+					<li>
+						<%= link_to "New Job", new_job_path %>
+					</li>
+					<li>
+						<%= link_to "New company", new_company_path %>
+					</li>
+					<li>
+						Logged as <%= current_company.name %>
+					</li>
+					<li>
+						<%= link_to 'Logout', logout_path %>
+					</li>
+					<% else %>
+					<li>
+						<%= link_to "Login", login_path %>
+					</li>
+				<% end %>
+			</ul>
+		</nav>
+
+		<div class="container">
+			<p id="notice"><%= notice %></p>
+			<p id="alert"><%= alert %></p>
+			<%= yield %>
+		</div>
+
+	</body>
+</html>

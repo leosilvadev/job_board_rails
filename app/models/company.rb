@@ -1,0 +1,25 @@
+require 'bcrypt'
+
+class Company < ActiveRecord::Base
+
+  has_many :jobs
+  
+  validates_presence_of :email, :name, :password
+  validates_uniqueness_of :email
+  validates_length_of :password, minimum: 6
+  validates_confirmation_of :password
+
+  def password=(password)
+    @password = password
+    self.encrypted_password = BCrypt::Password.create(@password)
+  end
+
+  def password
+    @password
+  end
+  
+  def valid_password?(password)
+    BCrypt::Password.new(encrypted_password) == password
+  end
+
+end

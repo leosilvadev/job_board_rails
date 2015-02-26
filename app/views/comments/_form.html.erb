@@ -1,0 +1,23 @@
+<%= form_for [@job, Comment.new] do |f| %>
+	<div class="field">
+		<p>
+			<%= f.label :name %>
+		</p>
+		<p>
+			<%= f.text_field :name %>
+		</p>
+	</div>
+	
+	<div class="field">
+		<p>
+			<%= f.label :body %>
+		</p>
+		<p>
+			<%= f.text_area :body %>
+		</p>
+	</div>
+	
+	<div class="actions">
+		<%= f.submit "send" %>
+	</div>
+<% end %>
