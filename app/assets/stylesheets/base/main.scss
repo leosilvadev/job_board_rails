@@ -1,0 +1,116 @@
+@import 'colors';
+
+body {
+  background-color: $background-color;
+}
+
+header {
+  .navbar-inverse {
+    background-color: $nav-color;
+
+    li.active a {
+      background-color: $nav-link-color !important;
+    }
+  }
+}
+
+p {
+  .comment {
+    background-color: rgb(244, 240, 255);
+    padding: 7px 10px 10px 10px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: right;
+
+    > span {
+      float: left;
+      margin-top: 7px;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.panel-primary>.panel-heading{
+  background-color: #3C2D67;
+  border-color: #1B0D45;
+}
+
+.panel-primary{
+  border-color: #DBD3EF;
+}
+
+#panel-login .panel-heading{
+  text-align: center;
+  font-size: 2.2em;
+}
+
+.panel-body{
+  background-color:rgba(244, 240, 255, 0.32);
+}
+
+#panel-login{
+  width:400px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#btn-login{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn.btn-primary {
+  background-color: rgba(60, 45, 103, 0.86);
+  border-color: #DBD3EF;
+}
+
+.btn.btn-primary:HOVER {
+  background-color: rgba(60, 45, 103, 0.66);
+  border-color: #DBD3EF;
+}
+
+input[type="checkbox"].form-control{
+  width:34px;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary{
+  background-color: rgba(127, 115, 161, 1);
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions>.btn.btn-default, .input-group>.btn.btn-default,
+.actions>.btn.btn-warning, .input-group>.btn.btn-warning,
+.actions>.btn.btn-info, .input-group>.btn.btn-info,
+.actions>.btn.btn-danger, .input-group>.btn.btn-danger{
+  width:100px;
+}
+
+.actions>.btn.btn-primary, .input-group>.btn.btn-primary{
+  width:150px;
+}
+
+.btn-full{
+  width: 100% !important;
+}
+
+.btn-radius-right{
+  border-radius: 0px 4px 4px 0px;
+}
+
+.btn-no-radius{
+  border-radius: 0px;
+}
+
+.comment_item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding-top: 5px;
+}
+
+
+.btn-edit-job, .btn-delete-job {
+  float: left;
+}
