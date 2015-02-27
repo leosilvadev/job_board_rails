@@ -4,20 +4,20 @@
 			<%= f.label :name %>
 		</p>
 		<p>
-			<%= f.text_field :name %>
+			<%= f.text_field :name, class: 'form-control' %>
 		</p>
 	</div>
-	
+
 	<div class="field">
 		<p>
 			<%= f.label :body %>
 		</p>
 		<p>
-			<%= f.text_area :body %>
+			<%= f.text_area :body, class: 'form-control' %>
 		</p>
 	</div>
-	
+
 	<div class="actions">
-		<%= f.submit "send" %>
+		<%= f.submit "send", class: 'btn btn-primary btn-full' %>
 	</div>
 <% end %>

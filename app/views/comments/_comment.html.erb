@@ -1,8 +1,13 @@
-<div>
+<div class="comment_item">
 	<h4>
 		<%= comment.name %> said:
 	</h4>
 	<%= simple_format comment.body %>
-	Sent <b><%= time_ago_in_words comment.created_at %></b> ago
-	<%= link_to "Destroy", comment_path(comment), method: :delete, data: {confirm: 'Are you sure?'} %>
+
+	<div class="input-group">
+		<div class="input-group-addon">Sent <b><%= time_ago_in_words comment.created_at %></b> ago</div>
+		<%= link_to comment_path(comment), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-radius-right' do %>
+			<i class="glyphicon glyphicon-trash"></i> Delete
+		<% end %>
+	</div>
 </div>

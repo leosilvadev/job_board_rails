@@ -1,16 +1,16 @@
 class JobsController < ApplicationController
-  
+
   before_filter :authorize_company, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_job, only: [:edit, :update, :destroy], except: [:show]
 
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.most_recent.all
+    @jobs = Job.most_recent.includes(:company).all
   end
-  
+
   def premium
-    @jobs = Job.where(premium:true).most_recent.paginate(page:params[:page], per_page:10)
+    @jobs = Job.where(premium: true).most_recent.includes(:company).paginate(page: params[:page], per_page: 10)
   end
 
   # GET /jobs/1
@@ -27,7 +27,7 @@ class JobsController < ApplicationController
   # GET /jobs/1/edit
   def edit
   end
-  
+
   def comments
     @comments = Comment.where(job_id: params[:job_id])
   end
@@ -73,19 +73,19 @@ class JobsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_job
-      @job = current_company.jobs.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_job
+    @job = current_company.jobs.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def job_params
-      params.require(:job).permit(:title, :description, :premium)
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def job_params
+    params.require(:job).permit(:title, :description, :premium)
+  end
+
+  def authorize_company
+    unless current_company
+      redirect_to root_path, alert: "You need to login to continue."
     end
-    
-    def authorize_company
-      unless current_company
-        redirect_to root_path, alert: "You need to login to continue."
-      end
-    end
+  end
 end

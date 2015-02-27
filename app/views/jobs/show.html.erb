@@ -1,20 +1,43 @@
-<h1>
-	<%= job_title @job %>
-</h1>
+<div class="row">
+	<div class="col-sm-8">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<%= job_title @job %>
+			</div>
+			<div class="panel-body">
+				<%= simple_format @job.description %>
+			</div>
+			<div class="panel-footer">
+				<div class="input-group">
+					<div class="input-group-addon"><%= pluralize @job.comments.size, 'comment' %></div>
+					<% if current_company == @job.company %>
+					<%= link_to 'Edit', edit_job_path(@job), class: 'btn btn-warning btn-radius-right' %>
+					<% end%>
+				</div>
+			</div>
+		</div>
+	</div>
 
-	
-<%= simple_format @job.description %>
-<p>
-	<%= pluralize @job.comments.size, 'comment' %>
-	<% if current_company == @job.company %>
-		<%= link_to 'Edit', edit_job_path(@job) %> |
-	<% end%>
-	<%= link_to 'Back', jobs_path %>
-</p>
 
-<h2>Send a new comment</h2>
-<%= render "comments/form" %>
+	<div class="col-sm-4">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Send a new comment
+			</div>
+			<div class="panel-body">
+				<%= render "comments/form" %>
+			</div>
+		</div>
+	</div>
+</div>
 
 
-<h2>Comments</h2>
-<%= render @job.comments %>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Comments
+	</div>
+	<div class="panel-body">
+		<%= render @job.comments %>
+	</div>
+</div>

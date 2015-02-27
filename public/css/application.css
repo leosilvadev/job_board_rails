@@ -71,3 +71,36 @@ input[type="checkbox"].form-control{
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary{
   background-color: rgba(127, 115, 161, 1);
 }
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions>.btn.btn-default, .input-group>.btn.btn-default,
+.actions>.btn.btn-warning, .input-group>.btn.btn-warning,
+.actions>.btn.btn-info, .input-group>.btn.btn-info,
+.actions>.btn.btn-danger, .input-group>.btn.btn-danger{
+  width:100px;
+}
+
+.actions>.btn.btn-primary, .input-group>.btn.btn-primary{
+  width:150px;
+}
+
+.btn-full{
+  width: 100% !important;
+}
+
+.btn-radius-right{
+  border-radius: 0px 4px 4px 0px;
+}
+
+.btn-no-radius{
+  border-radius: 0px;
+}
+
+.comment_item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  padding-top: 5px;
+}

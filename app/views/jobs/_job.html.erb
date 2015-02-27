@@ -4,22 +4,21 @@
 	</div>
 	<div class="panel-body">
 		<%= simple_format job.description %>
-		<p class="comment">
-			<span>
-				<i class="glyphicon glyphicon-comment"></i> <%= pluralize job.comments.size, 'comment' %>
-			</span>
-			<%= link_to job,  class: 'btn btn-info' do %>
-				<i class="glyphicon glyphicon-zoom-in"></i> Show
-			<% end %>
-
-			<% if current_company == job.company %>
-				<%= link_to edit_job_path(job), class: 'btn btn-warning' do %>
-					<i class="glyphicon glyphicon-pencil"></i> Edit
+			<div class="input-group">
+				<div class="input-group-addon">
+					<i class="glyphicon glyphicon-comment"></i> <%= pluralize job.comments.size, 'comment' %>
+				</div>
+				<% if current_company == job.company %>
+					<%= link_to edit_job_path(job), class: 'btn btn-warning btn-no-radius' do %>
+						<i class="glyphicon glyphicon-pencil"></i> Edit
+					<% end %>
+					<%= link_to job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-no-radius' do %>
+						<i class="glyphicon glyphicon-trash"></i> Delete
+					<% end %>
 				<% end %>
-				<%= link_to job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' do %>
-					<i class="glyphicon glyphicon-trash"></i> Delete
+				<%= link_to job,  class: 'btn btn-info btn-radius-right' do %>
+					<i class="glyphicon glyphicon-zoom-in"></i> Show
 				<% end %>
-			<% end %>
-		</p>
+			</div>
 	</div>
 </div>
