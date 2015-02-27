@@ -1,20 +1,20 @@
 Rails.application.routes.draw do
 
   root to: "jobs#premium"
-  
+
   get '/login', to: 'login#login'
   get '/logout', to: 'login#destroy'
   post '/authenticate', to: 'login#authenticate'
-  
+
   resources :companies, only: [:new, :create, :index]
-  
+
   resources :cars
-  
-  resources :jobs do 
+
+  resources :jobs do
     get '/comments', to: 'jobs#comments'
     post '/comments', to: 'comments#create'
   end
-  
+
   delete '/comments/:id', to: 'comments#destroy', as: :comment
 
   get '/hello/world'

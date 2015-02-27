@@ -104,3 +104,8 @@ input[type="checkbox"].form-control{
   border-bottom: 1px solid rgb(221, 221, 221);
   padding-top: 5px;
 }
+
+
+.btn-edit-job, .btn-delete-job {
+  float: left;
+}

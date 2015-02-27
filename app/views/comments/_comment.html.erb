@@ -6,8 +6,14 @@
 
 	<div class="input-group">
 		<div class="input-group-addon">Sent <b><%= time_ago_in_words comment.created_at %></b> ago</div>
-		<%= link_to comment_path(comment), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-radius-right' do %>
-			<i class="glyphicon glyphicon-trash"></i> Delete
+		<% if current_company == @job.company %>
+			<%= button_to comment_path(comment), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-radius-right' do %>
+				<i class="glyphicon glyphicon-trash"></i> Delete
+			<% end %>
+		<% else %>
+			<%= link_to root_path, class: 'btn btn-default btn-radius-right', disabled: 'disabled' do %>
+				<i class="glyphicon glyphicon-time"></i>
+			<% end %>
 		<% end %>
 	</div>
 </div>
