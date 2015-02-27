@@ -10,14 +10,14 @@ class CommentsController < ApplicationController
     end
     redirect_to @job
   end
-  
-  
+
+
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
     redirect_to @comment.job, notice: 'Comment destroyed successfully!'
   end
-  
+
   private
   def comment_params
       params.require(:comment).permit(:name, :body)

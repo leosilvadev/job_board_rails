@@ -2,19 +2,8 @@
 <html>
 	<head>
 		<title>JobBoard</title>
-		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= stylesheet_link_tag    'application', media: 'all' %>
 		<%= csrf_meta_tags %>
-
-		<style>
-		@IMPORT url("/libs/css/bootstrap.min.css");
-		@IMPORT url("/libs/css/bootstrap-switch.min.css");
-			@IMPORT url("/css/application.css");
-		</style>
-		<script src="/libs/js/jquery-2.1.3.min.js"></script>
-		<script src="/libs/js/bootstrap.min.js"></script>
-		<script src="/libs/js/bootstrap-switch.min.js"></script>
-		<script src="/js/application.js"></script>
 	</head>
 	<body>
 		<header class="navbar navbar-inverse navbar-static-top bs-docs-nav" id="top" role="banner">
@@ -73,5 +62,6 @@
 			<%= yield %>
 		</div>
 
+		<%= javascript_include_tag 'application' %>
 	</body>
 </html>
