@@ -1,9 +1,10 @@
 <div class="comment_item">
-	<h4>
+	<div class="comment_header">
 		<%= comment.name %> said:
-	</h4>
-	<%= simple_format comment.body %>
-
+	</div>
+	<div class="comment_body">
+		<%= comment.body %>
+	</div>
 	<div class="input-group">
 		<div class="input-group-addon">Sent <b><%= time_ago_in_words comment.created_at %></b> ago</div>
 		<% if current_company == @job.company %>

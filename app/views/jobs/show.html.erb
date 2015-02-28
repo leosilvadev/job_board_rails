@@ -9,9 +9,14 @@
 			</div>
 			<div class="panel-footer">
 				<div class="input-group">
-					<div class="input-group-addon"><%= pluralize @job.comments.size, 'comment' %></div>
+					<div class="input-group-addon">
+						<i class="glyphicon glyphicon-comment"></i>
+						<%= pluralize @job.comments.size, 'comment' %>
+					</div>
 					<% if current_company == @job.company %>
-						<%= link_to 'Edit', edit_job_path(@job), class: 'btn btn-warning btn-radius-right' %>
+						<%= link_to edit_job_path(@job), class: 'btn btn-warning btn-radius-right' do %>
+							<i class="glyphicon glyphicon-pencil"></i> Edit
+						<% end %>
 					<% else %>
 						<%= link_to 'Back', jobs_path, class: 'btn btn-default btn-radius-right' %>
 					<% end%>

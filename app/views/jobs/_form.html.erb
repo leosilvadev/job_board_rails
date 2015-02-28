@@ -25,13 +25,11 @@
     <%= f.text_area :description, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= link_to 'Back', jobs_path, class: 'btn btn-default' %>
-    <%= f.submit 'Save informations', class: 'btn btn-primary' %>
+    <%= link_to jobs_path, class: 'btn btn-default' do %>
+    	<i class="glyphicon glyphicon-remove"></i> Cancel
+    <% end %>
+    <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+    	<i class="glyphicon glyphicon-ok"></i> Save
+    <% end %>
   </div>
 <% end %>
-
-<script>
-  $(document).ready(function(){
-    $("input[type='checkbox']").bootstrapSwitch();
-  });
-</script>

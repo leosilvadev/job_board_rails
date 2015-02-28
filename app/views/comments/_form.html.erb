@@ -18,6 +18,8 @@
 	</div>
 
 	<div class="actions">
-		<%= f.submit "send", class: 'btn btn-primary btn-full' %>
+		<%= button_tag(type: 'submit', class: "btn btn-primary btn-full") do %>
+		 	<i class="glyphicon glyphicon-send"></i> Send Comment
+		<% end %>
 	</div>
 <% end %>

@@ -1,14 +1,13 @@
 <%= form_for(@company, html: { class: 'form-horizontal' }) do |f| %>
   <% if @company.errors.any? %>
-    <div class="alert alert-error">
-      <h3><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h3>
-
-      <ul>
-      <% @company.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+	<% @company.errors.full_messages.each do |msg| %>
+    	<div class="alert alert-warning">
+        	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			<%= msg %>
+        </div>
+  	<% end %>
   <% end %>
 
   <div class="control-group">
@@ -36,7 +35,11 @@
     </div>
   </div>
   <div class="actions">
-    <%= link_to 'Back', root_path, class: 'btn btn-default' %>
-    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to jobs_path, class: 'btn btn-default' do %>
+    	<i class="glyphicon glyphicon-remove"></i> Cancel
+    <% end %>
+    <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+    	<i class="glyphicon glyphicon-ok"></i> Save
+    <% end %>
   </div>
 <% end %>
