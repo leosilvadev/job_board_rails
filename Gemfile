@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'will_paginate'
 gem 'bcrypt', '~> 3.0'
+gem 'ckeditor_rails'
 
 gem 'capistrano-rails', group: :development
 

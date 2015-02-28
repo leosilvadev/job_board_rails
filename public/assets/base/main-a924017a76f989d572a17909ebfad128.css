@@ -1,0 +1,251 @@
+/* line 3, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+body {
+  background-color: #F4F0FF;
+}
+
+/* line 8, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+header .navbar-inverse {
+  background-color: #1B0D45;
+}
+/* line 11, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+header .navbar-inverse li.active a {
+  background-color: #291B54 !important;
+}
+
+/* line 18, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+p .comment {
+  background-color: #f4f0ff;
+  padding: 7px 10px 10px 10px;
+  border-radius: 5px;
+  width: 400px;
+  text-align: right;
+}
+/* line 25, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+p .comment > span {
+  float: left;
+  margin-top: 7px;
+  font-size: 1.2em;
+}
+
+/* line 33, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.field {
+  margin-top: 20px;
+}
+
+/* line 37, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.panel-primary > .panel-heading {
+  background-color: #3C2D67;
+  border-color: #1B0D45;
+}
+
+/* line 42, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.panel-primary {
+  border-color: #DBD3EF;
+}
+
+/* line 46, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+#panel-login .panel-heading {
+  text-align: center;
+  font-size: 2.2em;
+}
+
+/* line 51, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.panel-body {
+  background-color: rgba(244, 240, 255, 0.32);
+}
+
+/* line 55, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+#panel-login {
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 61, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+#btn-login {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* line 66, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.btn.btn-primary {
+  background-color: rgba(60, 45, 103, 0.86);
+  border-color: #DBD3EF;
+}
+
+/* line 71, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.btn.btn-primary:HOVER {
+  background-color: rgba(60, 45, 103, 0.66);
+  border-color: #DBD3EF;
+}
+
+/* line 76, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+input[type="checkbox"].form-control {
+  width: 34px;
+}
+
+/* line 80, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+  background-color: #7f73a1;
+}
+
+/* line 84, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.actions {
+  margin-top: 10px;
+}
+
+/* line 88, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.actions > .btn.btn-default, .input-group > .btn.btn-default,
+.actions > .btn.btn-warning, .input-group > .btn.btn-warning,
+.actions > .btn.btn-info, .input-group > .btn.btn-info,
+.actions > .btn.btn-danger, .input-group > .btn.btn-danger {
+  width: 100px;
+}
+
+/* line 95, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.actions > .btn.btn-primary, .input-group > .btn.btn-primary {
+  width: 150px;
+}
+
+/* line 99, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.btn-full {
+  width: 100% !important;
+}
+
+/* line 103, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.btn-radius-right {
+  border-radius: 0px 4px 4px 0px;
+}
+
+/* line 107, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.btn-no-radius {
+  border-radius: 0px;
+}
+
+/* line 111, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.comment_item {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+  padding-top: 5px;
+}
+
+/* line 118, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.btn-edit-job, .btn-delete-job {
+  float: left;
+}
+
+/* line 122, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+div.comment_item > .comment_body {
+  font-size: 1.1em;
+  padding: 10px;
+  background-color: rgba(238, 238, 238, 0.17);
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+}
+
+/* line 132, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+div.comment_item > .comment_header {
+  font-size: 1.4em;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+/* line 140, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* line 144, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-checkbox {
+  display: none;
+}
+
+/* line 147, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+/* line 151, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  -moz-transition: margin 0.3s ease-in 0s;
+  -webkit-transition: margin 0.3s ease-in 0s;
+  -o-transition: margin 0.3s ease-in 0s;
+  transition: margin 0.3s ease-in 0s;
+}
+
+/* line 156, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 161, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #34A7C1;
+  color: #FFFFFF;
+}
+
+/* line 166, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+/* line 172, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  -moz-transition: all 0.3s ease-in 0s;
+  -webkit-transition: all 0.3s ease-in 0s;
+  -o-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+/* line 180, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+/* line 183, /home/leonardo/dev/workspaces/ruby/rails/job_board/app/assets/stylesheets/base/main.scss */
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
