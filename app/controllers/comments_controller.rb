@@ -3,7 +3,12 @@ class CommentsController < ApplicationController
   def create
     @job = Job.find(params[:job_id])
     @comment = @job.comments.build(comment_params)
-    if @comment.save
+    
+    if success = @comment.save
+      CompanyMailer.new_comment(@job, @comment).deliver
+    end
+    
+    if success
       flash[:notice] = "Comment was create successfully!"
     else
       flash[:alert] = "Please fill all the fields!"

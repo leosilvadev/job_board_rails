@@ -6,10 +6,10 @@
 		<%= comment.body %>
 	</div>
 	<div class="input-group">
-		<div class="input-group-addon">Sent <b><%= time_ago_in_words comment.created_at %></b> ago</div>
+		<div class="input-group-addon"><%= t('.sent') %> <b><%= time_ago_in_words comment.created_at %></b> <%= t('.ago') %></div>
 		<% if current_company == @job.company %>
 			<%= button_to comment_path(comment), method: :delete, data: {confirm: 'Are you sure?'}, class: 'btn btn-danger btn-radius-right' do %>
-				<i class="glyphicon glyphicon-trash"></i> Delete
+				<i class="glyphicon glyphicon-trash"></i>
 			<% end %>
 		<% else %>
 			<%= link_to root_path, class: 'btn btn-default btn-radius-right', disabled: 'disabled' do %>

@@ -85,13 +85,6 @@ input[type="checkbox"].form-control{
   margin-top: 10px;
 }
 
-.actions>.btn.btn-default, .input-group>.btn.btn-default,
-.actions>.btn.btn-warning, .input-group>.btn.btn-warning,
-.actions>.btn.btn-info, .input-group>.btn.btn-info,
-.actions>.btn.btn-danger, .input-group>.btn.btn-danger{
-  width:100px;
-}
-
 .actions>.btn.btn-primary, .input-group>.btn.btn-primary{
   width:150px;
 }
@@ -182,4 +175,13 @@ div.comment_item > .comment_header {
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
+}
+
+
+a#btn-to-english{
+  padding-right: 5px !important;
+}
+
+a#btn-to-portuguese{
+  padding-left: 5px !important;
 }

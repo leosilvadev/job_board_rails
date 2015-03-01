@@ -15,38 +15,50 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a href="../" class="navbar-brand">Job Board</a>
+					<a href="../" class="navbar-brand"><%= t("menu.job_board") %></a>
 				</div>
 				<nav class="collapse navbar-collapse bs-navbar-collapse">
 					<ul class="nav navbar-nav">
 						<li>
-							<%= link_to "Premium Jobs", root_path %>
+							<%= link_to t("menu.premium_jobs"), root_path %>
 						</li>
 						<li>
-							<%= link_to "All Jobs", jobs_path %>
+							<%= link_to t("menu.all_jobs"), jobs_path %>
 						</li>
 						<% if current_company %>
 							<li>
-								<%= link_to "New Job", new_job_path %>
+								<%= link_to t("menu.new_job"), new_job_path %>
 							</li>
 							<li>
-								<%= link_to "New company", new_company_path %>
+								<%= link_to t("menu.new_company"), new_company_path %>
 							</li>
 						<% end %>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<% if current_company %>
 							<li>
-								<a href="#">Logged as <%= current_company.name %></a>
+								<a href="#"><%= t("menu.logged.as", username: current_company.name) %></a>
 							</li>
 							<li>
-								<%= link_to 'Logout', logout_path %>
+								<%= link_to t("menu.logout"), logout_path %>
 							</li>
 							<% else %>
 							<li>
-								<%= link_to "Login", login_path %>
+								<%= link_to t("menu.login"), login_path %>
 							</li>
 						<% end %>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+					  	<li>
+					  		<a id="btn-to-english" href="?locale=en">
+					  			<img src="/static/img/usa-flag.png" style="height: 20px;"/>
+					  		</a>
+					  	</li>
+					  	<li>
+					  		<a id="btn-to-portuguese" href="?locale=pt-BR">
+					  			<img src="/static/img/br-flag.png" style="height: 20px;"/>
+					  		</a>
+					  	</li>
 					</ul>
 				</nav>
 			</div>

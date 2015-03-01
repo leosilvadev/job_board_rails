@@ -6,18 +6,18 @@
 		<%= simple_format job.description %>
 			<div class="input-group">
 				<div class="input-group-addon">
-					<i class="glyphicon glyphicon-comment"></i> <%= pluralize job.comments.size, 'comment' %>
+					<i class="glyphicon glyphicon-comment"></i> <%= pluralize job.comments.size, t('.comment') %>
 				</div>
 				<% if current_company == job.company %>
 					<%= link_to edit_job_path(job), class: 'btn btn-warning btn-no-radius btn-edit-job' do %>
-						<i class="glyphicon glyphicon-pencil"></i> Edit
+						<i class="glyphicon glyphicon-pencil"></i> 
 					<% end %>
 					<%= button_to job, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-no-radius btn-delete-job' do %>
-						<i class="glyphicon glyphicon-trash"></i> Delete
+						<i class="glyphicon glyphicon-trash"></i> 
 					<% end %>
 				<% end %>
 				<%= link_to job,  class: 'btn btn-info btn-radius-right' do %>
-					<i class="glyphicon glyphicon-zoom-in"></i> Show
+					<i class="glyphicon glyphicon-zoom-in"></i> 
 				<% end %>
 			</div>
 	</div>

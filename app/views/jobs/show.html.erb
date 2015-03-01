@@ -11,14 +11,14 @@
 				<div class="input-group">
 					<div class="input-group-addon">
 						<i class="glyphicon glyphicon-comment"></i>
-						<%= pluralize @job.comments.size, 'comment' %>
+						<%= pluralize @job.comments.size, t('.comment') %>
 					</div>
 					<% if current_company == @job.company %>
 						<%= link_to edit_job_path(@job), class: 'btn btn-warning btn-radius-right' do %>
-							<i class="glyphicon glyphicon-pencil"></i> Edit
+							<i class="glyphicon glyphicon-pencil"></i>
 						<% end %>
 					<% else %>
-						<%= link_to 'Back', jobs_path, class: 'btn btn-default btn-radius-right' %>
+						<%= link_to t('root.back'), jobs_path, class: 'btn btn-default btn-radius-right' %>
 					<% end%>
 				</div>
 			</div>
@@ -29,7 +29,7 @@
 	<div class="col-sm-4">
 		<div class="panel panel-primary">
 			<div class="panel-heading">
-				Send a new comment
+				<%= t('.commentform')%>
 			</div>
 			<div class="panel-body">
 				<%= render "comments/form" %>
@@ -42,7 +42,7 @@
 
 <div class="panel panel-default">
 	<div class="panel-heading">
-		Comments
+		<%= t('.comments')%>
 	</div>
 	<div class="panel-body">
 		<%= render @job.comments %>

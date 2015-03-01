@@ -17,6 +17,8 @@ gem 'will_paginate'
 gem 'bcrypt', '~> 3.0'
 gem 'ckeditor_rails'
 
+gem 'rails-i18n', '~> 4.0.0'
+
 gem 'capistrano-rails', group: :development
 
 group :development, :test do

@@ -26,10 +26,10 @@
   </div>
   <div class="actions">
     <%= link_to jobs_path, class: 'btn btn-default' do %>
-    	<i class="glyphicon glyphicon-remove"></i> Cancel
+    	<i class="glyphicon glyphicon-remove"></i> <%= t('.cancel')%>
     <% end %>
     <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-    	<i class="glyphicon glyphicon-ok"></i> Save
+    	<i class="glyphicon glyphicon-ok"></i> <%= t('.send')%>
     <% end %>
   </div>
 <% end %>

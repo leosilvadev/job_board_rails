@@ -19,77 +19,77 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
+pt-BR:
   root:
-    back: 'Back'
+    back: 'Voltar'
     
   jobs:
     index:
-      header: 'Jobs'
-      
-    new:
-      header: 'New Job'
+      header: 'Vagas'
     
+    new:
+      header: 'Cadastro de Vaga'
+      
     edit:
-      header: 'Job Update'
+      header: 'Edição de Vaga'
       
     form:
-      send: 'Save'
-      cancel: 'Cancel'
+      send: 'Cadastrar'
+      cancel: 'Cancelar'
       
     premium:
-      header: 'Premium Jobs'
+      header: 'Vagas Premium'
       
     job:
-      comment: 'comment'
+      comment: 'commentário'
       
-    show: 
-      comments: 'Comments' 
-      comment: 'comment'
-      commentform: 'Send a new comment'
+    show:
+      comments: 'Comentários' 
+      comment: 'comentário'
+      commentform: 'Enviar um novo comentário'
   
   comments:
     form:
-      send: 'Send comment'
+      send: 'Enviar comentário'
     comment: 
-      sent: 'Sent'
-      ago: 'ago'
-  
+      sent: 'Enviado'
+      ago: 'atrás'
+      
   companies:
     form:
-      send: 'Save'
-      cancel: 'Cancel'
-      
+      send: 'Cadastrar'
+      cancel: 'Cancelar'
+  
   company_mailer:
     new_comment:
-      subject : "New comment received"
+      subject : "Novo comentário recebido"
   menu:
     job_board: 'Job Board'
-    premium_jobs: 'Premium Jobs'
-    all_jobs: 'All Jobs'
-    new_job: 'New Job'
-    new_company: 'New Company'
-    logout: 'Logout'
-    login: 'Login'
+    premium_jobs: 'Vagas Premium'
+    all_jobs: 'Todas as Vagas'
+    new_job: 'Nova Vaga'
+    new_company: 'Nova Empresa'
+    logout: 'Sair'
+    login: 'Entrar'
     logged:
       as: '%{username}'
-      
+
   activerecord:
     models:
-      comment: "Comment"
-      job: 'Job'
-      company: 'Company'
+      comment: "Comentário"
+      job: 'Vaga'
+      company: 'Empresa'
       
     attributes:
       comment:
-        name: "Name"
-        body: "Message"
+        name: "Nome"
+        body: "Mensagem"
       job:
         premium: 'Premium'
-        title: 'Title'
-        description: 'Description'
+        title: 'Titulo'
+        description: 'Descrição'
       company:
-        name: 'Name'
+        name: 'Nome'
         email: 'E-mail'
-        password: 'Password'
-        password_confirmation: 'Password confirmation'
+        password: 'Senha'
+        password_confirmation: 'Confirmação de senha'
